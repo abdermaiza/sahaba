@@ -117,7 +117,7 @@ ul {
 .main__content {
     margin-top: 1rem;
 }
-.list {
+.items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
     grid-gap: 1rem
@@ -144,5 +144,18 @@ ul {
 }
 .btn:hover,
 .btn:focus {
-    background-color: var(--tropical);
+    background-color: var(--tropical)
+}
+.btn.active {
+    background-color: var(--dark-color);
+    color: var(--white-color)
+}
+.card--badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #17a2b8;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 5px;
 }

@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #DEFENSIVE CSS
+\*------------------------------------*/
+
+body {
+  line-height: 1.5; /* for main paragraph content, this will help low vision users and people with cognitive concerns such as dyslexia */
+  letter-spacing: 0.0015em /* make our text more readable by adding small extra space between letters */
+}
+embed, iframe, object, img {
+  max-width: 100% /* all image should be contained in their container elements to prevent distortion */
+}
+img {
+  object-fit: contain /* to avoid a stretched or compressed image */
+}
+img:not([alt]),
+a:not([href]){
+  outline: 4px solid var(--warning-color) /* makes sure all images will have an alt attribute, empty if decorative; ensure links have an href as well, if not, use a button tag */
+}
+a {
+  text-underline-offset: 5px; /* to avoid a bad underline style on links */
+  overflow-wrap: break-word; /* makes sure the long string will wrap and not bust out of the container */
+  word-wrap: break-word /* used to break words that overflow their container */
+}
+h1,
+h2,
+h3 {
+  margin-block: 0
+}
+.button {
+  min-width: 8rem /* to have a minimum size for all buttons */
+}
+.main {
+  outline: none !important /* for the skip to content by keyboard nav, we should remove the outline on the main anchor */
+}
+a:focus,
+input:focus,
+.button:focus {
+  outline: 3px solid var(--white-color);
+  box-shadow: 0 0 0 6px var(--dark-color) /* provide the universal focus indicator on interactive elements */
+}
+.section__title {
+  margin-right: 1rem /* all title should have a margin at the end to prevent UX issues */
+}

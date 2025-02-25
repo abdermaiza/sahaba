@@ -6,7 +6,7 @@ const personnages = [
   { nom: "omar", surnom: "ibn elkhattaab", dateNaissance: "1990-02-15", nbHadiths: 2 },
   { nom: "zayd", surnom: "ibn thaabit", dateNaissance: "1982-07-30", nbHadiths: 42 },
   { nom: "aliy", surnom: "ibn abi talib", dateNaissance: "789", nbHadiths: 345 },
-  { nom: "abou houreira", surnom: "dffd", dateNaissance: "789", nbHadiths: 2505 }
+  { nom: "abou houreira", surnom: "dffd", dateNaissance: "679", nbHadiths: 2505 }
 ];
 
 /**
@@ -92,11 +92,10 @@ function afficherPersonnages(personnagesFiltres) {
           </h2>
           <div class="card--body">
               <div class="card--info">
-                  <p class="card--label">Date de naissance:</p>
-                  <p class="card--value">${dateFormatee} (${age} ans)</p>
+                  <p class="card--label">Date de décès : ${dateFormatee} <!--(${age} ans)--></p>
               </div>
               <div class="card--info">
-                  <p class="card--label">Hadiths rapportés: 
+                  <p class="card--label flex">Hadiths rapportés : 
                       ${personnage.nbHadiths}
                       <span class="card--badge">${getBadgeText(personnage.nbHadiths)}</span>
                   </p>

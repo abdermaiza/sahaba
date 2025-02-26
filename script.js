@@ -1,12 +1,21 @@
 // Exemple de liste de personnages
 const personnages = [
-  { nom: "Sa'd", surnom: "ibn abi waqqaas", dateNaissance: "1985-04-12", nbHadiths: 1242 },
+  { nom: "Sa'd", surnom: "ibn abi waqqaas", title:"أبو هريرة", dateNaissance: "1985-04-12", nbHadiths: 270 },
   { nom: "bilal", surnom: "elhabachi", dateNaissance: "1992-08-23", nbHadiths: 550 },
-  { nom: "abou bakr", surnom: "essiddiiq", dateNaissance: "1978-11-05", nbHadiths: 42 },
+  { nom: "Oubay", surnom: "ibn ka'b", dateNaissance: "1992-08-23", nbHadiths: 164 },
+  { nom: "abou bakr", surnom: "essiddiiq", dateNaissance: "1978-11-05", nbHadiths: 142 },
+  { nom: "mou'aadh", surnom: "ibn djabal", dateNaissance: "1992-08-23", nbHadiths: 157 },
+  { nom: "abdoulLaah", surnom: "ibn 'abbaas", tite:"عبد الله بن عباس", dateNaissance: "1992-08-23", nbHadiths: 1160 },
+  { nom: "abdoulLaah", surnom: "ibn 'omar", title:"عبد الله بن عمر", dateNaissance: "1992-08-23", nbHadiths: 2630 },
+  { nom: "abdoulLaah", surnom: "ibn mas'oud", title:"عبدالله بن مسعود", dateNaissance: "1992-08-23", nbHadiths: 848 },
   { nom: "omar", surnom: "ibn elkhattaab", dateNaissance: "1990-02-15", nbHadiths: 2 },
   { nom: "zayd", surnom: "ibn thaabit", dateNaissance: "1982-07-30", nbHadiths: 42 },
   { nom: "aliy", surnom: "ibn abi talib", dateNaissance: "789", nbHadiths: 345 },
-  { nom: "abou houreira", surnom: "dffd", dateNaissance: "679", nbHadiths: 2505 }
+  { nom: "Abou sa'iid", surnom: "elkhoudriyy", title:"أبو سعيد الخدري", dateNaissance: "1992-08-23", nbHadiths: 1170 },
+  { nom: "aicha", surnom: "bint abi bakr", title:"عائشة", dateNaissance: "678", nbHadiths: 2210 },
+  { nom: "outhmaan", surnom: "ibn affaan", dateNaissance: "789", nbHadiths: 146 },
+  { nom: "anas", surnom: "ibn maalik", title:"أنس بن مالك الأنصاري", dateNaissance: "1992-08-23", nbHadiths: 2286 },
+  { nom: "abou houreira", surnom: "", title:"أبوهريرة", dateNaissance: "632", nbHadiths: 5374 }
 ];
 
 /**
@@ -88,13 +97,15 @@ function afficherPersonnages(personnagesFiltres) {
       
       carte.innerHTML = `
           <h2 class="card--header">
-              ${personnage.nom} ${personnage.surnom}
+              <span dir="rtl" lang="ar" title="${personnage.title}">${personnage.nom} ${personnage.surnom}</span>
           </h2>
           <div class="card--body">
               <div class="card--info">
-                  <p class="card--label">Date de décès : ${dateFormatee} <!--(${age} ans)--></p>
+                  <p class="card--label">Décès : ${dateFormatee} <!--(${age} ans)--></p>
               </div>
               <div class="card--info">
+                  <p class="card--label">Particularités : 
+                  </p>
                   <p class="card--label flex">Hadiths rapportés : 
                       ${personnage.nbHadiths}
                       <span class="card--badge">${getBadgeText(personnage.nbHadiths)}</span>

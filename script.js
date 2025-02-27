@@ -1,6 +1,9 @@
 // Exemple de liste de personnages
 const personnages = [
-  { nom: "Sa'd", surnom: "ibn abi waqqaas", title:" سعد بن أبي وقاص", dateNaissance: "1985-04-12", nbHadiths: 270 },
+  { nom: "Sa'd", surnom: "ibn abi waqqaas", title:" سعد بن أبي وقاص", particularites: [
+    "L'un des premiers convertis et grand stratège militaire",
+    " il fut conquérant de la Perse."
+  ], dateNaissance: "1985-04-12", nbHadiths: 270 },
 
   { nom: "Djaabir", surnom: "ibn 'abdilLaah", title:"جابر بن عبد الله", dateNaissance: "1985-04-12", nbHadiths: 1540 },
 
@@ -17,7 +20,9 @@ const personnages = [
     " a dirigé le premier état islamique après le décès du Prophète."
   ], dateNaissance: "1978-11-05", nbHadiths: 142 },
 
-  { nom: "mou'aadh", surnom: "ibn djabal", title:"معاذ بن جبل", dateNaissance: "1992-08-23", nbHadiths: 157 },
+  { nom: "mou'aadh", surnom: "ibn djabal", title:"معاذ بن جبل", particularites: [
+    "Envoyé au Yémen comme juge et enseignant. Le Prophète le décrivit comme le plus savant de ma communauté concernant le licite et l'illicite"
+   ], dateNaissance: "1992-08-23", nbHadiths: 157 },
 
   { nom: "abdoulLaah", surnom: "ibn 'abbaas", title:"عبد الله بن عباس", dateNaissance: "1992-08-23", nbHadiths: 1160 },
 
@@ -47,7 +52,9 @@ const personnages = [
     " Connu pour vivre simplement malgré sa position de pouvoir"
   ], dateNaissance: "1990-02-15", nbHadiths: 22 },
 
-  { nom: "zayd", surnom: "ibn thaabit", title:"زيد بن ثابت", dateNaissance: "1982-07-30", nbHadiths: 42 },
+  { nom: "zayd", surnom: "ibn thaabit", title:"زيد بن ثابت", particularites: [
+
+  ], dateNaissance: "1982-07-30", nbHadiths: 42 },
 
   { nom: "aliy", surnom: "ibn abi talib", title:"علي بن أبي طالب", particularites: [
     "Quatrième calife de l'Islam",

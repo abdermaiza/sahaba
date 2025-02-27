@@ -8,7 +8,7 @@
     --link-color: #929292;
     --dark-color: #222;
     --warning-color: #D82020;
-    --blue-color: aliceblue;
+    --hawkes-color: #d4e9fb;
     --tropical: #bedbf5
 }
 html, body {
@@ -60,7 +60,7 @@ ul {
 .aside__content {
     margin-top: .5rem;
     padding: 0 1rem;
-    background-color: var(--blue-color);
+    background-color: var(--hawkes-color);
     border: 3px solid var(--dark-color);
     position: sticky;
     top: 0;
@@ -133,7 +133,7 @@ ul {
     border: 3px solid var(--dark-color);
     padding: 1rem;
     border-radius: .5rem;
-    background-color: var(--blue-color)
+    background-color: var(--hawkes-color)
 }
 .card--header {
     text-transform: capitalize;

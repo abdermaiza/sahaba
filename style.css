@@ -135,8 +135,18 @@ ul {
     border-radius: .5rem;
     background-color: var(--blue-color)
 }
-.item h2 {
-    text-transform: capitalize
+.card--header {
+    text-transform: capitalize;
+    position: relative
+}
+.card--header:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 90%;
+    content: '';
+    background-color: var(--link-color)
 }
 .btn {
     background-color: var(--white-color);
@@ -162,6 +172,13 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     margin: .5rem 0
+}
+.card--label+p {
+    margin: 0;
+    background-color: var(--white-color);
+    border-radius: .5rem;
+    padding: .5rem;
+    border: 1px solid var(--dark-color)
 }
 .card--badge {
     display: inline-block;

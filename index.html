@@ -8,7 +8,7 @@
     <title>Sahabas site</title>
 </head>
 
-<body>
+<body id="body">
     <a class="skip sr-only focusable-only" href="#main">Contenu principal</a>
 
     <header role="banner" class="header flex nowrap dark--bg">
@@ -24,13 +24,15 @@
         </a>
     </header>
 
-
-
     <main class="main" role="main" id="main" tabindex="-1">
 
         <aside role="complementary" class="aside__content" id="filters" aria-label="filtres">
-            <h2>Filtrer par :</h2>
-            <ul class="flex">
+            <h2>Filtres</h2>
+            <button type="button" class="btn btn--close">
+                <img src="https://img.icons8.com/?size=512&id=8112&format=png" alt="fermer" >
+                <span class="sr-only">Fermer</span>
+            </button>
+            <ul class="flex col">
                 <li>
                     <button class="btn active" data-critere="nom" data-ordre="true">Nom (A-Z)</button>
                 </li>
@@ -47,10 +49,16 @@
                     <button class="btn" data-critere="dateNaissance" data-ordre="false">Décès (décroissant)</button>
                 </li>
                 <li>
-                    <button class="btn" data-critere="nbHadiths" data-ordre="true">Hadiths rapportés (croissant)</button>
+                    <button class="btn" data-critere="nbHadiths" data-ordre="true">Hadiths (croissant)</button>
                 </li>
                 <li>
-                    <button class="btn" data-critere="nbHadiths" data-ordre="false">Hadiths rapportés (décroissant)</button>
+                    <button class="btn" data-critere="nbHadiths" data-ordre="false">Hadiths (décroissant)</button>
+                </li>
+                <li>
+                    <button class="btn" data-critere="ville" data-ordre="true">Ville (croissant)</button>
+                </li>
+                <li>
+                    <button class="btn" data-critere="ville" data-ordre="false">Ville (décroissant)</button>
                 </li>
             </ul>
         </aside>
@@ -58,7 +66,18 @@
         <div class="main__content">
             <H1 class="section__title">Les compagnons - <span dir="rtl" lang="ar" title="les compagnons">الصحابَة</span></H1>
     
-            <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique veniam, numquam hic recusandae quia, cum sequi earum nobis aliquid architecto, ut aliquam <a href>laborigosam</a> voluptas! Quae doloribus maxime obcaecati! Vero, temporibus?</P>
+            <P>Ce site Internet offre une vision globale sur les <strong>compagnons du Prophète</strong> de l'Islam, Mouhammed, paix et bénédiciton sur lui. Qu'Allah soit satisfait d'eux !</P>
+            <p>Les informations pour chaque compagnon sont listées dans cet odre :
+                <ol class="list">
+                    <li>Nom ou surnom (par défaut),</li>
+                    <li>Date de décès,</li>
+                    <li>Particularités / histoire,</li>
+                    <li>Nombre de hadiths rapportés,</li>
+                    <li>Ville(s) d'habitation.</li>
+                </ol>
+            </p>
+            <p>Un système de <strong>filtre</strong> permet de gérer l'affichage selon ses préférences.</p>
+            <p>Des erreurs sont possibles, n'hésitez donc pas à nous les remonter à la <a href="#">page contact</a>.</p>
 
             <ul id="cartesContainer" class="items">
                 <!-- Les cartes seront générées dynamiquement par JavaScript -->
@@ -68,10 +87,121 @@
     </main>
 
     <footer class="footer dark--bg" role="contentinfo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorum, dolore eaque <a>reprehenderit</a>, saepe aut adipisci, fugiat alias nihil tempore delectus tenetur. Maiores totam at aliquam! Ab voluptas alias eos?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorum, dolore eaque <a href>reprehenderit</a>, saepe aut adipisci, fugiat alias nihil tempore delectus tenetur. Maiores totam at aliquam! Ab voluptas alias eos?</p>
     </footer>
 
+    <a href="#body" title="remonter en haut" aria-label="remonter en haut" class="backTop"></a>
     <script src="script.js"></script>
+    <script>
+        // Ajout d'un bouton pour basculer entre les modes d'affichage
+        document.addEventListener('DOMContentLoaded', function() {
+        // Création du bouton de basculement
+        const toggleButton = document.createElement('button');
+        toggleButton.innerText = 'Mode Liste';
+        //toggleButton.setAttribute("aria-label", "mode liste");
+        toggleButton.classList.add('toggle-view-btn');
+        
+        // Ajout du style CSS pour le mode liste
+        const styleElement = document.createElement('style');
+        styleElement.textContent = `
+            .list-view li.item {
+                display: flex !important;
+                flex-direction: row !important;
+                height: 80px !important;
+                margin-bottom: 10px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .list-view li.item img {
+                width: 60px !important;
+                height: 60px !important;
+                border-radius: 50% !important;
+                margin-right: 15px !important;
+                object-fit: cover !important;
+            }
+            
+            .list-view li.item .content {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                width: 100% !important;
+                padding: 0 15px !important;
+            }
+            
+            .list-view li.item h3 {
+                font-size: 1rem !important;
+                margin: 0 !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+            
+            .list-view li.item p,
+            .list-view li.item .details {
+                display: none !important;
+            }
+            
+            .list-view main ul {
+            display: flex !important;
+                flex-direction: column !important;
+                grid-template-columns: unset !important;
+            }
+        `;
+        document.head.appendChild(styleElement);
+        
+        // Sélection du conteneur principal
+        const mainElement = document.querySelector('.main__content');
+        if (mainElement) {
+            // Ajout du bouton au DOM
+            document.body.appendChild(toggleButton);
+            
+            // Ajouter un événement de clic pour basculer entre les modes
+            toggleButton.addEventListener('click', function() {
+                const isListView = mainElement.classList.toggle('list-view');
+                toggleButton.innerText = isListView ? 'Mode Carte' : 'Mode Liste';
+                
+                // Forcer un rafraîchissement du layout si nécessaire
+                if (isListView) {
+                    const container = mainElement.querySelector('ul');
+                    if (container) {
+                    container.style.display = 'grid';
+                    }
+                } else {
+                    const container = mainElement.querySelector('ul');
+                    if (container) {
+                    container.style.display = '';
+                    }
+                }
+            });
+        }
+        
+        // Fonction pour observer les changements dans le DOM
+        // Utile si les cartes sont chargées dynamiquement
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length > 0) {
+                // Vérifiez si de nouveaux éléments ont été ajoutés
+                mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === 1 && node.classList && node.classList.contains('item')) {
+                    // Appliquer le style si nous sommes en mode liste
+                    if (mainElement && mainElement.classList.contains('list-view')) {
+                    // Déjà géré par les styles CSS
+                    
+                    }
+                }
+                });
+            }
+            });
+        });
+        
+        // Configuration de l'observateur pour surveiller les changements dans le contenu
+        if (mainElement) {
+            observer.observe(mainElement, { childList: true, subtree: true });
+        }
+        });
+    </script>
 
 </body>
 </html>

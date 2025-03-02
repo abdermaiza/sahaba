@@ -3,30 +3,30 @@ const personnages = [
   { nom: "Sa'd", surnom: "ibn abi waqqaas", title:" سعد بن أبي وقاص", particularites: [
     "L'un des premiers convertis et grand stratège militaire",
     " il fut conquérant de la Perse."
-  ], dateNaissance: "1985-04-12", nbHadiths: 270 },
+  ], dateNaissance: "1985-04-12", nbHadiths: 270, ville: "Mecque, Médine" },
 
-  { nom: "Djaabir", surnom: "ibn 'abdilLaah", title:"جابر بن عبد الله", dateNaissance: "1985-04-12", nbHadiths: 1540 },
+  { nom: "Djaabir", surnom: "ibn 'abdilLaah", title:"جابر بن عبد الله", dateNaissance: "1985-04-12", nbHadiths: 1540, ville: "Medine, Bagdad, Egypte, Damas" },
 
   { nom: "bilal", surnom: "ibn rabah", title:"بلال بن رباح", particularites: [
     "Premier muezzin de Médine", 
     " ancien esclave éthipien libéré par Abou Bakr."
-  ], dateNaissance: "1992-08-23", nbHadiths: 550 },
+  ], dateNaissance: "634", nbHadiths: 550, ville: "Mecque, Medine, Syrie" },
 
-  { nom: "Oubay", surnom: "ibn ka'b", title:"أبي بن كعب", dateNaissance: "1992-08-23", nbHadiths: 164 },
+  { nom: "Oubay", surnom: "ibn ka'b", title:"أبي بن كعب", dateNaissance: "1992-08-23", nbHadiths: 164, ville: "Medine" },
 
   { nom: "abou bakr", surnom: "essiddiiq", title:"أبو بكر الصديق", particularites: [
     "Premier calife après le Prophète", 
     " meilleur ami et beau-père du Prophète", 
     " a dirigé le premier état islamique après le décès du Prophète."
-  ], dateNaissance: "1978-11-05", nbHadiths: 142 },
+  ], dateNaissance: "634", nbHadiths: 142, ville: "Mecque" },
 
   { nom: "mou'aadh", surnom: "ibn djabal", title:"معاذ بن جبل", particularites: [
     "Envoyé au Yémen comme juge et enseignant. Le Prophète le décrivit comme le plus savant de ma communauté concernant le licite et l'illicite"
-   ], dateNaissance: "1992-08-23", nbHadiths: 157 },
+   ], dateNaissance: "1992-08-23", nbHadiths: 157, ville: "Medine, Yemen Mecque, Palestine, Syrie" },
 
-  { nom: "abdoulLaah", surnom: "ibn 'abbaas", title:"عبد الله بن عباس", dateNaissance: "1992-08-23", nbHadiths: 1160 },
+  { nom: "abdoulLaah", surnom: "ibn 'abbaas", title:"عبد الله بن عباس", dateNaissance: "1992-08-23", nbHadiths: 1160, ville: "Mecque, Medine" },
 
-  { nom: "abdoulLaah", surnom: "ibn 'omar", title:"عبد الله بن عمر", dateNaissance: "1992-08-23", nbHadiths: 2630 },
+  { nom: "abdoulLaah", surnom: "ibn 'omar", title:"عبد الله بن عمر", dateNaissance: "1992-08-23", nbHadiths: 2630, ville: "Mecque" },
 
   { nom: "abdoulLaah", surnom: "ibn mas'oud", title:"عبدالله بن مسعود", particularites: [
     "L'un des premiers convertis à l'Islam",
@@ -34,7 +34,7 @@ const personnages = [
     " Premier à réciter publiquement le Coran à La Mecque",
     " Éminent juriste et enseignant du Coran",
     " A transmis plus de 800 hadiths"
-  ], dateNaissance: "1992-08-23", nbHadiths: 848 },
+  ], dateNaissance: "1992-08-23", nbHadiths: 848, ville: "Mecque" },
 
   { nom: "salmaan", surnom: "alfaarisiy", title:" سلمان الفارسي", particularites: [
     "D'origine persane, ancien zoroastrien puis chrétien",
@@ -42,7 +42,7 @@ const personnages = [
     " A suggéré la stratégie du fossé lors de la bataille des Coalisés",
     " Gouverneur de Madain sous le califat d'Umar",
     " Symbolise la dimension universelle de l'Islam"
-  ], dateNaissance: "654", nbHadiths: 50 },
+  ], dateNaissance: "654", nbHadiths: 50, ville: "Mecque" },
 
   { nom: "omar", surnom: "ibn elkhattaab", title:"أبو حفص عمر بن الخطاب", particularites: [
     "Deuxième calife de l'Islam",
@@ -50,11 +50,11 @@ const personnages = [
     " A établi de nombreuses institutions administratives",
     " A supervisé l'expansion de l'empire islamique",
     " Connu pour vivre simplement malgré sa position de pouvoir"
-  ], dateNaissance: "1990-02-15", nbHadiths: 22 },
+  ], dateNaissance: "1990-02-15", nbHadiths: 22, ville: "Mecque" },
 
   { nom: "zayd", surnom: "ibn thaabit", title:"زيد بن ثابت", particularites: [
 
-  ], dateNaissance: "1982-07-30", nbHadiths: 42 },
+  ], dateNaissance: "1982-07-30", nbHadiths: 42, ville: "Mecque" },
 
   { nom: "aliy", surnom: "ibn abi talib", title:"علي بن أبي طالب", particularites: [
     "Quatrième calife de l'Islam",
@@ -62,9 +62,9 @@ const personnages = [
     " Premier enfant à avoir embrassé l'Islam",
     " Reconnu pour son éloquence, sa sagesse et sa bravoure",
     " Figure centrale dans la tradition intellectuelle islamique"
-  ], dateNaissance: "789", nbHadiths: 345 },
+  ], dateNaissance: "789", nbHadiths: 345, ville: "Koufa, Medine, Mecque" },
 
-  { nom: "Abou sa'iid", surnom: "elkhoudriyy", title:"أبو سعيد الخدري", dateNaissance: "1992-08-23", nbHadiths: 1170 },
+  { nom: "Abou sa'iid", surnom: "elkhoudriyy", title:"أبو سعيد الخدري", dateNaissance: "1992-08-23", nbHadiths: 1170, ville: "Mecque" },
 
   { nom: "aicha", surnom: "bint abi bakr", title:"عائشة", particularites: [
     "Épouse bien-aimée du Prophète Muhammad",
@@ -72,7 +72,7 @@ const personnages = [
     " Grande savante et narratrice de nombreux hadiths",
     " A joué un rôle important dans la transmission du savoir islamique",
     " Connue pour son intelligence et sa mémoire exceptionnelle"
-  ], dateNaissance: "678", nbHadiths: 2210 },
+  ], dateNaissance: "678", nbHadiths: 2210, ville: "Medine" },
 
   { nom: "outhmaan", surnom: "ibn affaan", title:"عثمان بن عفان", particularites: [
     "Troisième calife de l'Islam",
@@ -80,11 +80,11 @@ const personnages = [
     " A financé l'équipement de l'armée musulmane lors de difficultés",
     " A supervisé la compilation standardisée du Coran",
     " Connu pour sa modestie et sa générosité exceptionnelle"
-  ], dateNaissance: "789", nbHadiths: 146 },
+  ], dateNaissance: "789", nbHadiths: 146, ville: "Mecque" },
 
-  { nom: "anas", surnom: "ibn maalik", title:"أنس بن مالك الأنصاري", dateNaissance: "1992-08-23", nbHadiths: 2286 },
+  { nom: "anas", surnom: "ibn maalik", title:"أنس بن مالك الأنصاري", dateNaissance: "1992-08-23", nbHadiths: 2286, ville: "Mecque" },
 
-  { nom: "abou houreira", surnom: "", title:"أبوهريرة", dateNaissance: "632", nbHadiths: 5374 }
+  { nom: "abou houreira", surnom: "", title:"أبوهريرة", dateNaissance: "632", nbHadiths: 5374, ville: "Mecque" }
 ];
 
 /**
@@ -177,6 +177,7 @@ function afficherPersonnages(personnagesFiltres) {
                   <p> ${personnage.particularites}</p>
                   <p class="card--label flex">Hadiths rapportés : 
                       ${personnage.nbHadiths}
+                      <span>${personnage.ville}</span>
                       <span class="card--badge">${getBadgeText(personnage.nbHadiths)}</span>
                   </p>
               </div>
@@ -224,10 +225,10 @@ afficherPersonnages(personnagesFiltres);
 
 
 
-
-
 // Filters scroll animation
 const filters = document.getElementById('filters');
+const remove = document.querySelector('btn--close');
+
 window.addEventListener('scroll', () => {
     if(window.scrollY > 200) {
       filters.classList.add('active');
@@ -235,6 +236,18 @@ window.addEventListener('scroll', () => {
     if(window.scrollY < 100) {
       filters.classList.remove('active');
     }
+    remove.addEventListener('click', function() {
+      filters.classList.remove('active');
+    })
 });
 
-
+// Back-to-top animation
+const backtop = document.querySelector('.backTop');
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 500) {
+        backtop.classList.add('active');
+    }
+    if(window.scrollY < 100) {
+        backtop.classList.remove('active');
+    }
+});

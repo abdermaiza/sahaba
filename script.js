@@ -28,6 +28,9 @@ const personnages = [
 
   { nom: "abdoulLaah", surnom: "ibn 'omar", title:"عبد الله بن عمر", dateNaissance: "1992-08-23", nbHadiths: 2630, ville: "Mecque" },
 
+  { nom: "Zoubayr", surnom: "ibn al'awwaam", title:"الزبير بن العوام بن خويلد", dateNaissance: "656", nbHadiths: 2630, ville: "Mecque, Medine" },
+
+
   { nom: "abdoulLaah", surnom: "ibn mas'oud", title:"عبدالله بن مسعود", particularites: [
     "L'un des premiers convertis à l'Islam",
     " Compagnon constant du Prophète et gardien de ses secrets",
@@ -177,7 +180,7 @@ function afficherPersonnages(personnagesFiltres) {
                   <p> ${personnage.particularites}</p>
                   <p class="card--label flex">Hadiths rapportés : 
                       ${personnage.nbHadiths}
-                      <span>${personnage.ville}</span>
+                      <span>Ville(s) d'habitation : ${personnage.ville}</span>
                       <span class="card--badge">${getBadgeText(personnage.nbHadiths)}</span>
                   </p>
               </div>

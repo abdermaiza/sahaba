@@ -27,11 +27,12 @@
     <main class="main" role="main" id="main" tabindex="-1">
 
         <aside role="complementary" class="aside__content" id="filters" aria-label="filtres">
-            <h2>Filtres</h2>
+            <h2 class="subtitle">Filtres</h2>
             <button type="button" class="btn btn--close" title="fermer">
                 <img src="https://img.icons8.com/?size=512&id=8112&format=png" alt="fermer" >
                 <span class="sr-only">Fermer</span>
             </button>
+
             <ul class="flex col">
                 <li>
                     <button class="btn active" data-critere="nom" data-ordre="true">Nom (A-Z)</button>
@@ -92,6 +93,8 @@
 
     <a href="#body" title="remonter en haut" aria-label="remonter en haut" class="backTop"></a>
     <script src="script.js"></script>
+
+    <!-- Code mode liste/ carte -->
     <script>
         // Ajout d'un bouton pour basculer entre les modes d'affichage
         document.addEventListener('DOMContentLoaded', function() {
@@ -104,49 +107,8 @@
         // Ajout du style CSS pour le mode liste
         const styleElement = document.createElement('style');
         styleElement.textContent = `
-            .list-view li.item {
-                display: flex !important;
-                flex-direction: row !important;
-                height: 80px !important;
-                margin-bottom: 10px !important;
-                width: 100% !important;
-                max-width: 100% !important;
-            }
-            
-            .list-view li.item img {
-                width: 60px !important;
-                height: 60px !important;
-                border-radius: 50% !important;
-                margin-right: 15px !important;
-                object-fit: cover !important;
-            }
-            
-            .list-view li.item .content {
-                display: flex !important;
-                flex-direction: row !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                width: 100% !important;
-                padding: 0 15px !important;
-            }
-            
-            .list-view li.item h3 {
-                font-size: 1rem !important;
-                margin: 0 !important;
-                white-space: nowrap !important;
-                overflow: hidden !important;
-                text-overflow: ellipsis !important;
-            }
-            
-            .list-view li.item p,
-            .list-view li.item .details {
-                display: none !important;
-            }
-            
-            .list-view main ul {
-            display: flex !important;
-                flex-direction: column !important;
-                grid-template-columns: unset !important;
+            .list-view li.item p {
+                display: none !important
             }
         `;
         document.head.appendChild(styleElement);

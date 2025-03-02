@@ -227,7 +227,7 @@ afficherPersonnages(personnagesFiltres);
 
 // Filters scroll animation
 const filters = document.getElementById('filters');
-const remove = document.querySelector('btn--close');
+const remove = document.querySelector('.btn--close');
 
 window.addEventListener('scroll', () => {
     if(window.scrollY > 200) {
@@ -236,9 +236,12 @@ window.addEventListener('scroll', () => {
     if(window.scrollY < 100) {
       filters.classList.remove('active');
     }
-    remove.addEventListener('click', function() {
-      filters.classList.remove('active');
-    })
+    if (remove && filters) {
+      remove.addEventListener('click', function() {
+        filters.classList.remove('active');
+        filters.classList.add('zizou');
+      });
+    }
 });
 
 // Back-to-top animation
@@ -251,3 +254,5 @@ window.addEventListener('scroll', () => {
         backtop.classList.remove('active');
     }
 });
+
+

@@ -86,6 +86,9 @@ ul {
         padding: 1rem
     }
 }
+.aside__content.zizou {
+    position: inherit !important
+}
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -212,7 +215,6 @@ ul {
     min-width: 5rem;
     text-align: center
 }
-
 .toggle-view-btn {
     position: fixed;
     top: 11.5rem;
@@ -263,7 +265,6 @@ ul {
     display: block;
     transform: translateY(2rem)
 }
-
 .btn--close {
     display: none
 }
@@ -273,9 +274,15 @@ ul {
 .active .btn--close {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0;
+    right: 0;
+    min-width: 4rem;
     border: none;
     background: transparent;
     cursor: pointer
+}
+@media screen and (min-width:82em) {
+    .active .btn--close {
+        display: none
+    }
 }

@@ -78,7 +78,7 @@
                 </ol>
             </p>
             <p>Un système de <strong>filtre</strong> permet de gérer l'affichage selon ses préférences.</p>
-            <p>Des erreurs sont possibles, n'hésitez donc pas à nous les remonter à la <a href="#">page contact</a>.</p>
+            <p>Un bouton permet de réduire l'affichage pour ne voir que les noms : le <strong>mode liste</strong>.</p>
 
             <ul id="cartesContainer" class="items">
                 <!-- Les cartes seront générées dynamiquement par JavaScript -->
@@ -88,13 +88,13 @@
     </main>
 
     <footer class="footer dark--bg" role="contentinfo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorum, dolore eaque <a href>reprehenderit</a>, saepe aut adipisci, fugiat alias nihil tempore delectus tenetur. Maiores totam at aliquam! Ab voluptas alias eos?</p>
+        <p>Des erreurs sont possibles, n'hésitez donc pas à nous les remonter à la <a href="#">page contact</a>.</p>
     </footer>
 
     <a href="#body" title="remonter en haut" aria-label="remonter en haut" class="backTop"></a>
+
     <script src="script.js"></script>
 
-    <!-- Code mode liste/ carte -->
     <script>
         // Ajout d'un bouton pour basculer entre les modes d'affichage
         document.addEventListener('DOMContentLoaded', function() {
@@ -123,7 +123,7 @@
             toggleButton.addEventListener('click', function() {
                 const isListView = mainElement.classList.toggle('list-view');
                 toggleButton.innerText = isListView ? 'Mode Carte' : 'Mode Liste';
-                
+                toggleButton.setAttribute('aria-label', isListView ? 'Mode carte dépliée' : 'Mode liste pliée');
                 // Forcer un rafraîchissement du layout si nécessaire
                 if (isListView) {
                     const container = mainElement.querySelector('ul');

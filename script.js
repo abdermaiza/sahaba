@@ -17,6 +17,7 @@ const personnages = [
   { nom: "abou bakr", surnom: "essiddiiq", title:"أبو بكر الصديق", particularites: [
     "Premier calife après le Prophète", 
     " meilleur ami et beau-père du Prophète", 
+    " a converti 5 compagnons parmi les 10 promis au Paradis",
     " a dirigé le premier état islamique après le décès du Prophète."
   ], dateNaissance: "634", nbHadiths: 142, ville: "Mecque" },
 
@@ -223,9 +224,6 @@ document.querySelectorAll('.btn').forEach(bouton => {
 // Affichage initial (tri par défaut: nom A-Z)
 const personnagesFiltres = filtrerPersonnages(personnages, 'nom', true);
 afficherPersonnages(personnagesFiltres);
-
-
-
 
 
 // Filters scroll animation
